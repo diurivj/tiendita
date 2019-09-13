@@ -13,7 +13,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 
 mongoose
-  .connect('mongodb://joss:a123123@ds051615.mlab.com:51615/tiendita', {
+  .connect(process.env.DB, {
     useNewUrlParser: true
   })
   .then(x => {
