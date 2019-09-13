@@ -21,10 +21,10 @@ const {
   === CRUD
 */
 
-router.get('/all', catchErrors(getProducts)) // mostrar todo
-router.get('/:productId', catchErrors(getProduct)) // mostrar uno
 router.get('/create', addProductForm) // mostrar crear uno *
+router.get('/all', catchErrors(getProducts)) // mostrar todo
 router.post('/create', uploadCloud.single('photo'), catchErrors(addProduct)) //  crear un producto
+router.get('/:productId', catchErrors(getProduct)) // mostrar uno
 router.get('/edit/:productId', editProductForm) // mostrar editar un producto *
 router.post(
   '/edit/:productId',

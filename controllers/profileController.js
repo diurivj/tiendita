@@ -14,3 +14,16 @@ exports.updateProfile = async (req, res) => {
   await Profile.findByIdAndUpdate(profileId, {name, img})
   res.redirect('/profile')
 }
+
+exports.addCreditsForm = (req, res) => {
+  res.render('add-credits')
+}
+
+exports.addCredits = async (req, res) => {
+  const {id, credits: currentCredits} = req.user
+  const {credits} = req.body
+  await User.findByIdAndUpdate(id, {
+    credits: parseInt(currentCredits) + parseInt(credits)
+  })
+  res.redirect('/profile')
+}

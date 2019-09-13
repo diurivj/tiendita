@@ -13,7 +13,17 @@ const userSchema = new Schema(
     profile: {
       ref: 'Profile',
       type: Schema.Types.ObjectId
-    }
+    },
+    credits: {
+      type: Number,
+      default: 0
+    },
+    products: [
+      {
+        ref: 'Product',
+        type: Schema.Types.ObjectId
+      }
+    ]
   },
   {
     timestamps: {

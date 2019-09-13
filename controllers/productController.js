@@ -3,7 +3,11 @@ const Product = require('../models/Product')
 //TODO: CRUD
 
 exports.getProducts = async (req, res) => {
-  const products = await Product.find()
+  const products = await Product.find().populate({
+    path: 'owner',
+    populate: {path: 'profile'}
+  })
+  console.log(products)
   res.render('products/all', {products})
 }
 

@@ -1,0 +1,61 @@
+<h1>Agregar producto nuevo</h1>
+<section class="section">
+  <div class="container">
+    <columns class="is-centered">
+      <div class="column is-half">
+        <form action="/products/create" method="post" enctype="multipart/form-data">
+          <div class="field">
+            <label class="label">nombre</label>
+            <div class="control">
+              <input class="input" type="text" name="name" placeholder="ke vende">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Descripción</label>
+            <div class="control">
+              <input class="input" type="text" name="description" placeholder="ke ase">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Unidades</label>
+            <div class="control">
+              <input class="input" type="Number" name="stock" placeholder="kuantos">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Precio</label>
+            <div class="control">
+              <input class="input" type="Number" name="price" placeholder="kuantos peso">
+            </div>
+          </div>
+          <div class="field">
+            <div class="file is-centered is-boxed is-success has-name">
+              <label class="file-label">
+                <input class="file-input" type="file" name="photo">
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Centered file…
+                  </span>
+                </span>
+                <span class="file-name">
+                  Screen Shot 2017-07-29 at 15.54.25.png
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <p class="control">
+              <button class="button is-success is-fullWidth">
+                Añadir
+              </button>
+            </p>
+          </div>
+        </form>
+      </div>
+    </columns>
+  </div>
+</section>

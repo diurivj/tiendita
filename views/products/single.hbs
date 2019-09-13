@@ -1,0 +1,17 @@
+<section class="section">
+  <div class="container">
+    <columns class="is-centered">
+      <column class="is-half">
+        <div class="box">
+          <h1 class="is-size-1">{{name}}</h1>
+          <img src="{{photo}}" alt="name" width="300">
+          <p>{{description}}</p>
+          <hr>
+          <b>${{price}}</b>
+          <p>Vendido por: {{owner.profile.name}}</p>
+          <a class="button is-info is-fullWidth" href="/buy/{{_id}}">Comprar</a>
+        </div>
+      </column>
+    </columns>
+  </div>
+</section>

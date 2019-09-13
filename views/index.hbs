@@ -2,4 +2,12 @@
   <div class="container">
     <h1 class="is-size-1">Bienvenido al Ironchangarro</h1>
   </div>
+  <ul>
+    {{#each products}}
+    <li>
+      <h4>{{this.name}}</h4>
+      <b>${{this.price}}</b> <a href="/product/{{this._id}}">Comprar</a>
+    </li>
+    {{/each}}
+  </ul>
 </section>
